@@ -1,0 +1,6 @@
+{
+  "main": "mongodb",
+  "dependencies": {
+    "mongodb": "^2.2.12"
+  }
+}
