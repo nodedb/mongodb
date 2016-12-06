@@ -1,5 +1,6 @@
 {
   "main": "mongodb",
+  "driverName": "MongoDB",
   "dependencies": {
     "mongodb": "^2.2.12"
   }

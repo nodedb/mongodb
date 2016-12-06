@@ -21,24 +21,12 @@ module.exports = angular => {
     const app = angular.module(module, []);
 
     app
-        .controller(`${module}.DatabaseListCtrl`, function (currentConnection) {
+        .controller(`${module}.DbConnectionCtrl`, function (currentConnection) {
 
             this.eg = "some input";
 
         })
-        .factory(`${module}.databaseListTpl`, () => fs.readFileSync(`${__dirname}/views/dbList.html`))
-        .controller(`${module}.MenubarCtrl`, function (currentConnection) {
-
-            this.eg = "some input";
-
-        })
-        .factory(`${module}.menuBarTpl`, () => fs.readFileSync(`${__dirname}/views/menubar.html`))
-        .controller(`${module}.ViewportCtrl`, function (currentConnection) {
-
-            this.eg = "some input";
-
-        })
-        .factory(`${module}.ViewportTpl`, () => fs.readFileSync(`${__dirname}/views/viewport.html`))
+        .factory(`${module}.dbConnectionTpl`, () => fs.readFileSync(`${__dirname}/views/dbConnection.html`))
         .factory(`${module}.strategy`, require("./lib/strategy"))
         .factory(`${module}.connectForm`, () => {
 
