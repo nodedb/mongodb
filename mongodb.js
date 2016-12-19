@@ -28,15 +28,16 @@ module.exports = angular => {
         })
         .factory(`${module}.dbConnectionTpl`, () => fs.readFileSync(`${__dirname}/views/dbConnection.html`))
         .factory(`${module}.strategy`, require("./lib/strategy"))
-        .factory(`${module}.connectForm`, () => {
+        .factory(`${module}.connectForm`, ($translate) => {
 
             return {
                 type: "object",
                 properties: {
                     url: {
-                        type: "string",
                         default: "mongodb://localhost",
-                        required: true
+                        required: true,
+                        title: $translate.instant("DB.URL"),
+                        type: "string"
                     }
                 }
             };
