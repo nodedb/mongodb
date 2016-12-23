@@ -26,6 +26,11 @@ module.exports = angular => {
             this.eg = "some input";
 
         })
+        .factory(`${module}.dbConnectionResolve`, () => currentConnection => {
+
+            console.log("@todo");
+
+        })
         .factory(`${module}.dbConnectionTpl`, () => fs.readFileSync(`${__dirname}/views/dbConnection.html`))
         .factory(`${module}.strategy`, require("./lib/strategy"))
         .factory(`${module}.connectForm`, ($translate) => {
