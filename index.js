@@ -58,6 +58,10 @@ module.exports = class MySQL {
         }];
     }
 
+    static get displayType () {
+        return 'document';
+    }
+
     static get logo () {
         return path.join(__dirname, 'logo.png');
     }
