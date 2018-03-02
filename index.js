@@ -11,7 +11,7 @@ const { MongoClient } = require('mongodb');
 
 /* Files */
 
-module.exports = class MySQL {
+exports.default = class MongoDB {
     constructor (connection) {
         this.connectionData = connection;
     }
@@ -45,7 +45,7 @@ module.exports = class MySQL {
             label: 'PORT',
             key: 'port',
             type: 'number',
-            default: 27017,
+            default: 37017,
             required: true
         }, {
             label: 'USERNAME',
@@ -60,6 +60,10 @@ module.exports = class MySQL {
 
     static get displayType () {
         return 'document';
+    }
+
+    static get lang () {
+        return 'javascript';
     }
 
     static get logo () {
